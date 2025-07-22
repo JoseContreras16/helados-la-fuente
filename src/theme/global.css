@@ -1,0 +1,71 @@
+/* Estilos Globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c3e50; /* Fondo oscuro */
+    color: #ecf0f1; /* Texto claro */
+}
+
+/* Contenedor del Formulario */
+.login-container {
+    width: 300px; /* Ancho del formulario */
+    margin: 100px auto; /* Centrado vertical y horizontal */
+    background-color: rgba(44, 62, 80, 0.8); /* Fondo semitransparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Título */
+h2 {
+    text-align: center; /* Centrar el título */
+    margin: 0 0 20px; /* Margen inferior */
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Margen inferior */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Botón de Login */
+button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #f39c12; /* Color del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Texto en blanco */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambiar cursor a mano */
+}
+
+/* Botón Hover */
+button:hover {
+    background-color: #e67e22; /* Color al pasar por encima */
+}
+
+/* Enlaces */
+a {
+    color: #3498db; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin-right: 5px; /* Espacio a la derecha */
+}
+
+/* Estilos de pie de página */
+.footer {
+    text-align: center; /* Centrar texto */
+    margin-top: 15px; /* Margen superior */
+    font-size: 14px; /* Tamaño de fuente menor */
+}
