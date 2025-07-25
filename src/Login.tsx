@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { IonContent, IonPage, IonInput, IonButton, IonCheckbox, IonLabel, IonItem, IonHeader, IonToolbar, IonTitle, IonIcon } from '@ionic/react';
 import { logoFacebook, mailOutline, logoTwitter } from 'ionicons/icons';
-import './Login.css';  // Importa el CSS para estilizar
+import { Link } from 'react-router-dom'; // 👈 Importa Link
+import './Login.css';
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
@@ -14,7 +15,6 @@ const Login: React.FC = () => {
       alert('Please enter both username and password.');
       return;
     }
-    // For now, just log the values
     console.log('Logging in with:', { username, password, rememberMe });
     alert(`Logged in as ${username}`);
   };
@@ -30,7 +30,7 @@ const Login: React.FC = () => {
         <div className="login-container">
           <IonItem>
             <IonInput
-              placeholder="username"
+              placeholder="Username"
               value={username}
               onIonChange={e => setUsername(e.detail.value!)}
             />
@@ -38,11 +38,12 @@ const Login: React.FC = () => {
           <IonItem>
             <IonInput
               type="password"
-              placeholder="password"
+              placeholder="Password"
               value={password}
               onIonChange={e => setPassword(e.detail.value!)}
             />
           </IonItem>
+
           <div className="checkbox-row">
             <IonCheckbox
               checked={rememberMe}
@@ -51,13 +52,16 @@ const Login: React.FC = () => {
             />
             <span className="checkbox-label">Remember me</span>
           </div>
+
           <IonButton expand="full" className="login-button" onClick={handleLogin}>Login</IonButton>
+
           <div className="social-buttons">
             <button className="social-btn"><IonIcon icon={logoFacebook} /></button>
             <button className="social-btn"><IonIcon icon={mailOutline} /></button>
             <button className="social-btn"><IonIcon icon={logoTwitter} /></button>
           </div>
-          <p>Don't have an account? <a href="#">Sign Up</a></p>
+
+          <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
           <p><a href="#">Forgot your password?</a></p>
         </div>
       </IonContent>
