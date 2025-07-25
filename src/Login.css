@@ -1,11 +1,29 @@
+
+ion-checkbox::part(container) {
+  display: none;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* espacio entre checkbox y label */
+  margin-top: 10px; /* opcional */
+}
+
+.checkbox-label {
+  font-size: 14px;
+  color: white; /* ajusta si estás en modo oscuro o claro */
+}
+
+
 /* src/Login.css */
 .login-container {
-  width: 300px; /* Ancho del formulario */
-  margin: 100px auto; /* Centrado vertical y horizontal */
-  background-color: rgba(44, 62, 80, 0.8); /* Fondo semitransparente */
-  padding: 20px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra */
+  width: 300px; 
+  margin: 100px auto; 
+  background-color: rgba(44, 62, 80, 0.8); 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
   color: white;
   display: flex;
   flex-direction: column;
@@ -13,9 +31,25 @@
   height: auto;
 }
 
+
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.custom-checkbox {
+  --background: red; 
+  --border-color: red;
+  --checkmark-color: white;
+}
+
 .login-button {
   margin-top: 20px;
-  background-color: #ffcc00; /* Color del botón */
+  background-color: #ffcc00; 
   color: black;
 }
 
@@ -27,7 +61,7 @@
 }
 
 .social-btn {
-  background-color: #ffcc00; /* Color de botones sociales */
+  background-color: #ffcc00; 
   border: none;
   width: 30px;
   height: 30px;
@@ -38,11 +72,6 @@
   justify-content: center;
   align-items: center;
   padding: 0;
-}
-
-/* Remove black triangle but keep checkbox box visible */
-ion-checkbox::part(native) {
-  display: none;
 }
 
 .checkbox-label {

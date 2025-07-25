@@ -43,14 +43,14 @@ const Login: React.FC = () => {
               onIonChange={e => setPassword(e.detail.value!)}
             />
           </IonItem>
-          <IonItem>
+          <div className="checkbox-row">
             <IonCheckbox
-              slot="start"
               checked={rememberMe}
               onIonChange={e => setRememberMe(e.detail.checked)}
+              className="custom-checkbox"
             />
-            <span className="checkbox-label">Guardar cuenta</span>
-          </IonItem>
+            <span className="checkbox-label">remember me</span>
+          </div>
           <IonButton expand="full" className="login-button" onClick={handleLogin}>Login</IonButton>
           <div className="social-buttons">
             <button className="social-btn"><IonIcon icon={logoFacebook} /></button>
