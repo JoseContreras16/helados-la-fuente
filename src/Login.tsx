@@ -49,7 +49,7 @@ const Login: React.FC = () => {
               onIonChange={e => setRememberMe(e.detail.checked)}
               className="custom-checkbox"
             />
-            <span className="checkbox-label">remember me</span>
+            <span className="checkbox-label">Remember me</span>
           </div>
           <IonButton expand="full" className="login-button" onClick={handleLogin}>Login</IonButton>
           <div className="social-buttons">
