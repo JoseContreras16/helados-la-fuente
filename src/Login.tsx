@@ -5,6 +5,7 @@ import { logoFacebook, mailOutline, logoTwitter } from 'ionicons/icons';
 import { Link } from 'react-router-dom'; // 👈 Importa Link
 import './Login.css';
 
+
 const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -62,7 +63,7 @@ const Login: React.FC = () => {
           </div>
 
           <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
-          <p><a href="#">Forgot your password?</a></p>
+          <p><Link to="/forgot-password">Forgot your password?</Link></p>
         </div>
       </IonContent>
     </IonPage>
